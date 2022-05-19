@@ -1,6 +1,9 @@
 /* General settings */
 
 :root{
+    --legend-color-one: #828282;
+    --legend-color-two: #696C85;
+    --black-font-color: #0A071B;
     --black-one: #1F1F24;
     --black-two: #35353D;
     --black-three: #737380;
@@ -10,6 +13,9 @@
     --secondary-normal: #5138EE;
     --primary-dark: #07002D;
     --secondary-dark: #3420B6;
+
+    --montserrat: 'Montserrat', sans-serif;
+    --inter: 'Inter', sans-serif;
 }
 *,
 ::before,
@@ -78,6 +84,16 @@ button{
     font-weight: 300;
     letter-spacing: 3;
     color: var(--black-three);
+}
+
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--black-font-color);
+}
+.font-inter{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 /* header */
@@ -190,4 +206,77 @@ header{
     position: absolute;
     right: 326px;
     bottom: 0;
+}
+
+/* Profile and posts */
+
+.cards-container{
+    margin: 36px 0;
+    display: flex;
+    align-items: center;
+    min-height: 410px;
+    border-radius: 10px;
+    position: relative;
+}
+.profile,
+.posts{
+    padding: 24px;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 385px;
+    height: 408px;
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    color: var(--black-font-color);
+}
+.profile-legend{
+    color: var(--legend-color-one);
+    font-size: 15px;
+}
+.profile-title{
+    align-self: start;
+    font-size: 22px;
+}
+#profile-user-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-image{
+    background-image: url('assets/ImagemPerfil.svg');
+    background-position: center;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;;
+    overflow: hidden;
+}
+.profile-name{
+    margin-top: 15px;
+    font-size: 18px;
+}
+.profile-job{
+    font-size: 15px;
+    line-height: 42px;
+}
+.profile-numbers{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 68px;
+    width: 335px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+#profile-posts,
+#profile-favorite,
+#profile-score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 9px;
 }
