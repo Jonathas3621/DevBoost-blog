@@ -213,7 +213,9 @@ header{
 .cards-container{
     margin: 36px 0;
     display: flex;
+    gap: 32px;
     align-items: center;
+    justify-content: space-between;
     min-height: 410px;
     border-radius: 10px;
     position: relative;
@@ -279,4 +281,69 @@ header{
     align-items: center;
     justify-content: center;
     margin: 0 9px;
+}
+
+/* Posts */
+
+.posts{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 408px;
+    max-width: 65,7%;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+}
+.posts-title{
+    align-self: start;
+    font-size: 22px;
+}
+.posts-card-container{
+    width: inherit;
+    display: flex;
+    gap: 19px;
+}
+.posts-card{
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    max-width: 235px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.posts-resume{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: 17px 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 9px;
+}
+.posts-card-image{
+    border-radius: 10px;
+    width: inherit;
+}
+.posts-card-category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 33px;
+    background-color: #dcdae5;
+    border-radius: 37px;
+    color: var(--secondary-normal);
+    font-size: 13px;
+}
+.posts-card-text{
+    font-size: 15px;
+    line-height: 23px;
+}
+.posts-card-author{
+    color: #696C85;
+    font-size: 13px;
+}
+.posts-card-author b{
+    font-weight: 700;
 }
