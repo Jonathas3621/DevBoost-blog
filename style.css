@@ -285,10 +285,22 @@ header{
 #profile-posts,
 #profile-favorite,
 #profile-score{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.the-top-bar{
+    position:absolute;
+    top: -1px;
+    background-color: var(--secondary-normal);
+    width: 61px;
+    height: 5px;
+    border-radius: 0 0 4px 4px;
+}
+.chosen-number{
+    color: var(--secondary-normal);
 }
 
 /* Posts */
@@ -414,6 +426,20 @@ svg:hover path{
     .banner-rocket{
         display: none;
     }
+
+    /* cards container*/
+
+    .profile{
+        width: 100%;
+    }
+    .profile-numbers{
+        width: 100%;
+        gap: 7px;
+    }
+    .cards-container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 790px){
@@ -423,13 +449,14 @@ svg:hover path{
         overflow: hidden;
         height: 0px;
         transition-duration: 0.4s;
-        transition-delay: 0.4s;
+        transition-delay: 0.1s;
         transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     }
     .main-menu-active{
         height: 160px;
         transition-duration: 0.4s;
-        transition-delay: 0.1s;
+        transition-delay: 0s;
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 0.8);
     }
     .main-menu a{
         justify-content: start;
@@ -449,6 +476,7 @@ svg:hover path{
         justify-content: space-between;
     }
     #bars02{
+        margin-right: 35px;
         display: flex;
         align-items: center;
         transition: 0.5s;
@@ -456,16 +484,19 @@ svg:hover path{
     .bars-active{
         transform: rotate(90deg);
     }
-    .utilities{
+    .right-content{
+        display: flex;
+        align-items: flex-start;
         overflow: hidden;
         transition-delay: 0s;
-        transition-duration: 0.4s;
-        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
         height: 0px;
     }
-    .utilities-active{
+    .right-content-active{
         height: 44px;
-        transition-duration: 0.4s;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
         transition-delay: 0.4s;
         margin-bottom: 20px;
     }

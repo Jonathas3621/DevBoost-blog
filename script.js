@@ -1,6 +1,6 @@
 const bars = document.querySelector("#bars");
 const bars02 = document.querySelector("#bars02");
-const utilities = document.querySelector(".utilities");
+const utilities = document.querySelector(".right-content");
 const mainMenu = document.querySelector(".main-menu");
 
 bars.addEventListener('click', function(e){
@@ -20,6 +20,6 @@ bars02.addEventListener('click', function(e){
     else{
         e.target.classList.add('bars-active');
     }
-    utilities.classList.toggle('utilities-active');
+    utilities.classList.toggle('right-content-active');
     mainMenu.classList.toggle('main-menu-active');
 });
