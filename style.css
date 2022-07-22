@@ -44,6 +44,7 @@ a{
 button{
     border: none;
     background-color: transparent;
+    transition: 0.3s;
 }
 
 /* Configuring fonts */
@@ -99,7 +100,6 @@ button{
 /* header */
 
 .container{
-    min-width: 600px;
     width: 90%;
     max-width: 1216px;
 }
@@ -109,6 +109,7 @@ header{
     align-items: center;
 }
 .content-container{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -117,22 +118,26 @@ header{
 }
 .left-content{
     display: flex;
+    gap: 55px;
 }
-.logo{
-    margin-right: 55px;
+#main-menu-container{
+    display: flex;
+    align-items: center;
 }
 .main-menu{
     display: flex;
-}
-.main-menu li{
-    margin-right: 26px;
+    gap: 26px;
 }
 .utilities{
     display: flex;
     align-items: center;
+    flex-direction: row;
+    gap: 27px;
+    justify-content: center;
 }
-.utilities li{
-    margin-left: 27px;
+#bars, #bars02{
+    color: var(--secondary-normal);
+    display: none;
 }
 .criar{
     width: 116px;
@@ -142,10 +147,10 @@ header{
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-normal);
+    gap: 10px;
 }
 .criar p{
     color: #fff;
-    margin-left: 10px
 }
 
 /* Banner */
@@ -157,6 +162,7 @@ header{
     background-color: var(--black-one);
     border-radius: 10px;
     position: relative;
+    z-index: 0;
 }
 .banner-texts{
     margin-left: 118px;
@@ -164,6 +170,7 @@ header{
     flex-direction: column;
     align-items: flex-start;
     max-width: 380px;
+    z-index: 2;
 }
 .banner-headding{
     color: #fff;
@@ -195,6 +202,7 @@ header{
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 0;
 }
 .banner-vector{
     position: absolute;
@@ -204,7 +212,7 @@ header{
 }
 .banner-rocket{
     position: absolute;
-    right: 326px;
+    right: 220px;
     bottom: 0;
 }
 
@@ -214,7 +222,7 @@ header{
     margin: 36px 0;
     display: flex;
     gap: 32px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     min-height: 410px;
     border-radius: 10px;
@@ -272,6 +280,7 @@ header{
     width: 335px;
     border: 1px solid #d9d9d9;
     border-radius: 5px;
+    gap: 9px;
 }
 #profile-posts,
 #profile-favorite,
@@ -280,7 +289,6 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 9px;
 }
 
 /* Posts */
@@ -290,7 +298,8 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 408px;
+    min-height: 408px;
+    /*height: 408px;*/
     max-width: 65,7%;
     border: 1px solid #ebebeb;
     border-radius: 8px;
@@ -303,6 +312,8 @@ header{
     width: inherit;
     display: flex;
     gap: 19px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .posts-card{
     border: 1px solid #ebebeb;
@@ -346,4 +357,142 @@ header{
 }
 .posts-card-author b{
     font-weight: 700;
+}
+button:hover{
+    background-color: var(--secondary-dark);
+}
+.link:hover{
+    color: var(--black-three);
+}
+.svg{
+    cursor: pointer;
+}
+svg path{
+    fill: var(--black-two);
+}
+svg:hover path{
+    fill: var(--black-three);
+}
+
+@media screen and (max-width: 1024px) and (min-width: 791px){
+    .utilities{
+        background-color: #fff;
+        position: absolute;
+        justify-content: flex-start;;
+        right: 15px;
+        top: 35px; 
+        flex-direction: column;
+        z-index: 1;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s height, 0s 0.5s padding;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .utilities-active{
+        height: 238px;
+        padding: 10px;
+        transition: 0.5s height, 0s padding;
+    }
+    #bars{
+        margin-right: 35px;
+        display: flex;
+        transition-duration: 0.5s;
+    }
+    .bars-active{
+        transform: rotate(90deg);
+    }
+    .criar{
+        width: 44px;
+    }
+    #text-criar{
+        display: none;
+    }
+
+    /* banner */
+
+    .banner-rocket{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .main-menu{
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden;
+        height: 0px;
+        transition-duration: 0.4s;
+        transition-delay: 0.4s;
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .main-menu-active{
+        height: 160px;
+        transition-duration: 0.4s;
+        transition-delay: 0.1s;
+    }
+    .main-menu a{
+        justify-content: start;
+    }
+    .content-container{
+        flex-direction: column;
+    }
+    .left-content{
+        margin: 22.5px 0 20px 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .top-responsive{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #bars02{
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+    }
+    .bars-active{
+        transform: rotate(90deg);
+    }
+    .utilities{
+        overflow: hidden;
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        height: 0px;
+    }
+    .utilities-active{
+        height: 44px;
+        transition-duration: 0.4s;
+        transition-delay: 0.4s;
+        margin-bottom: 20px;
+    }
+
+    /* banner */
+    .banner{
+        justify-content: center;
+        padding: 40px;
+    }
+    .banner-images{
+        display: none;
+    }
+    .banner-texts{
+        margin: 0;
+    }
+
+    /* cards container*/
+
+    .profile{
+        width: 100%;
+    }
+    .profile-numbers{
+        width: 100%;
+        gap: 7px;
+    }
+    .cards-container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
