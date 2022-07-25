@@ -10,7 +10,7 @@ bars.addEventListener('click', function(e){
     else{
         e.target.classList.add('bars-active');
     }
-    utilities.classList.toggle('utilities-active');
+    utilities.classList.toggle('right-content-active');
 });
 
 bars02.addEventListener('click', function(e){

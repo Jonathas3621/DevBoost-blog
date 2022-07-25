@@ -387,12 +387,13 @@ svg:hover path{
 }
 
 @media screen and (max-width: 1024px) and (min-width: 791px){
-    .utilities{
+    .right-content{
         background-color: #fff;
         position: absolute;
         justify-content: flex-start;;
         right: 15px;
         top: 35px; 
+        display: flex;
         flex-direction: column;
         z-index: 1;
         height: 0px;
@@ -401,7 +402,11 @@ svg:hover path{
         border-bottom-right-radius: 30px;
         border-bottom-left-radius: 30px;
     }
-    .utilities-active{
+    .utilities{
+        display: flex;
+        flex-direction: column;
+    }
+    .right-content-active{
         height: 238px;
         padding: 10px;
         transition: 0.5s height, 0s padding;
